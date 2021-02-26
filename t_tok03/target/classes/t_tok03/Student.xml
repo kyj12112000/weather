@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="Student">
+ <!-- resultType 결과 타입이 뭔지 alias에서 xml지정한 명칭-->
+ 	<select id="findAllStudent" resultType="StudentType">
+ 		SELECT * FROM student;
+ 	</select>
+ </mapper>

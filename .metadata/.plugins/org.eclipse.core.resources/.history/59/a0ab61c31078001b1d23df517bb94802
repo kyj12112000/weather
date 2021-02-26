@@ -1,0 +1,26 @@
+package weater_test;
+
+public class VillageWeatherParsing {
+	public static void main(String[] args) {
+		try {
+			
+			/*요청정보입력
+			 * 아래와 같은 정보들은 사용자가 가이드를 확인하여 찾으면됨
+			 * 위도 경도는 엑셀파일 안에 있음
+			 * 
+			 */
+			//자신이 조회를 원하는 지역의 위도와 경도 입력
+			String nx = "92"; //경도
+			String ny = "131"; //위도
+			String baseDate = "20180502"; // 자신이 조회하고 싶은 날짜를 입력해주세요
+			
+			String baseTime = "0500"; //자신이 조회하고 싶은 시간대 입력
+			
+			//서비스 인증키 
+			String serviceKey = "W4gJBrjc6NqWpBDA3A5ZS9WA%2FdqrHSk7R8ONAslxyabq3ZamHHIovb5BV7wZsk%2Fgz1FuXPPhGI3HfL4%2F%2FZvyrw%3D%3D";
+			
+			
+		
+	}
+}
+}

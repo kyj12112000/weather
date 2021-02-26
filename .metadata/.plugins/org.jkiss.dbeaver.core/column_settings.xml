@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id="NodeList/DBNDatabaseFolder">
+		<column name="이름" visible="true" order="0" width="201"/>
+	</item>
+	<item id="NodeList/DBNProjectDatabases/DBNBookmarkFolder/DBNDiagramFolder/DBNResource">
+		<column name="이름" visible="true" order="0" width="128"/>
+		<column name="경로" visible="true" order="1" width="231"/>
+		<column name="크기" visible="true" order="2" width="58"/>
+		<column name="최종 수정" visible="true" order="3" width="216"/>
+	</item>
+	<item id="NodeList/OraclePrivRole">
+		<column name="Role" visible="true" order="0" width="114"/>
+		<column name="Admin Option" visible="true" order="1" width="129"/>
+		<column name="Default" visible="true" order="2" width="72"/>
+	</item>
+	<item id="NodeList/OraclePrivSystem">
+		<column name="Privilege" visible="true" order="0" width="230"/>
+		<column name="Admin Option" visible="true" order="1" width="129"/>
+	</item>
+	<item id="NodeList/OracleSchema">
+		<column name="Name" visible="true" order="0" width="186"/>
+	</item>
+	<item id="NodeList/OracleUser">
+		<column name="User name" visible="true" order="0" width="186"/>
+		<column name="Status" visible="true" order="1" width="63"/>
+		<column name="Create date" visible="true" order="2" width="196"/>
+	</item>
+	<item id="SchemaSelector">
+		<column name="Name" visible="true" order="0" width="186"/>
+	</item>
+</items>

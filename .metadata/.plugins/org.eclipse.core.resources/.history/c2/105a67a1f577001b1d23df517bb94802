@@ -1,0 +1,8 @@
+package testW;
+
+public class Weather {
+/*
+ * 현재시간 가져오기
+ * 
+ * /
+}

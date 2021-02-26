@@ -1,0 +1,16 @@
+package weater_test;
+
+public class VillageWeatherParsing {
+	public static void main(String[] args) {
+		try {
+			
+			/*요청정보입력
+			 * 아래와 같은 정보들은 사용자가 가이드를 확인하여 찾으면됨
+			 * 위도 경도는 엑셀파일 안에 있음
+			 * 
+			 */
+			
+			
+		}
+	}
+}

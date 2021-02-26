@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="helloWorld" class="t_tok01.HellowWorld">
+		<property name="message" value="spring hellow world" />
+	</bean>
+
+	<bean id="battery" class="t_tok02.Battery">
+		<property name="name" value="스프링 배터리 세터" />
+	</bean>
+
+	<bean id="battery2" class="t_tok02.Battery">
+		<constructor-arg name="name" value="스프링 생성자22"></constructor-arg>
+	</bean>
+
+	<bean id="blackPhone" class="t_tok02.BlackPhone">
+		<constructor-arg ref="battery2"></constructor-arg>
+	</bean>
+
+	<!-- 핵심로직인 ItemTarget을 bean으로 설정 -->
+	<bean id="itemTarget" class="t_tok03.ItemTarget"></bean>
+	<bean id="goodsTarget" class="t_tok03.GoodsTarget"></bean>
+	<!-- 관점 로직인 LoggingAdivce bean으로 설정 -->
+	<bean id="LoggingAdvice" class="t_tok03.LoggingAdvice"></bean>
+
+	<aop:config>
+		<aop:aspect ref="LoggingAdvice">
+			<aop:before method="beforeAdvice" pointcut="execution(* t_tok03.ItemTarget.*())"/>
+			<aop:before method="beforeBuyConfirm" pointcut="execution(* t_tok03.ItemTarget.buyItem())"/>
+			<aop:after method="afterAdvice" pointcut="execution(* t_tok03.*Target.buy*(..))"/>
+			<aop:around method="aroundAdivce" pointcut="execution(* t_tok03.*Target.buy*(..))"/> 
+		</aop:aspect>
+	</aop:config>
+	
+	<context:annotation-config></context:annotation-config>
+	
+	<bean id="student" class="t_tok04.Student" init-method="init" destroy-method="cleanUp">
+		<property name="name" value="스프링"/>
+	</bean>
+
+</beans>
